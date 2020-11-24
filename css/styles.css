@@ -15,8 +15,8 @@
       cursor: pointer;
       padding: 12px;
       color: white;
-      background-color: rebeccapurple;
-      border-radius: 50%;
+      background-color: purple;
+      border: 1.5px solid white !important;
   }
 
   .container-fluid {
@@ -73,9 +73,29 @@
       overflow: hidden !important;
   }
 
+  .navbar-collapse ul li a:hover {
+      color: skyblue !important;
+  }
+
   .navbar-right {
       margin-right: 5em !important;
   }
+
+  .form-control,
+  .search-btn {
+      border-radius: 0px !important;
+      border: none !important;
+  }
+
+  .search-btn:hover {
+      background-color: white !important;
+  }
+
+  .search-btn:active {
+      border: none !important;
+  }
+
+
 
   .first-section {
       display: flex;
@@ -156,7 +176,7 @@
 
   .second-section {
       height: 100vh;
-      background-color: lightgray;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 100, 1) 32%, rgba(0, 212, 255, 1) 89%);
       display: flex;
       justify-content: center;
       position: relative;
@@ -171,27 +191,29 @@
   .second-section-left-text {
       height: auto;
       max-width: 35vw;
-      background-color: darkblue;
+      background-color: white;
       opacity: 0.6;
       position: absolute;
       left: 8%;
       bottom: 12%;
       padding: 1%;
-      color: white;
+      color: black;
       text-align: center;
+      box-shadow: 10px 14px 22px 2px black;
   }
 
   .second-section-right-text {
       height: auto;
       max-width: 35vw;
-      background-color: purple;
+      background-color: white;
       opacity: 0.6;
       position: absolute;
       right: 4%;
       top: 8%;
       padding: 1%;
-      color: white;
-      text-align: center
+      color: black;
+      text-align: center;
+      box-shadow: 10px 14px 22px 2px black;
   }
 
   .third-section h2 {
@@ -204,14 +226,11 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      padding: 6% 15%;
   }
 
-  .third-section-first-div {
-      padding: 8% 15% 4% 15%;
-  }
 
   .third-section-second-div {
-      padding: 4% 15% 4% 15%;
       background-color: lightgray;
   }
 
@@ -221,10 +240,6 @@
 
   .third-section-second-div h4 {
       color: steelblue;
-  }
-
-  .third-section-third-div {
-      padding: 4% 15% 8% 15%;
   }
 
   .third-section-right-text,
@@ -294,13 +309,14 @@
   /*************     MEDIA QUERIES    **************/
 
 
-@media screen and (max-width: 973px) {
-    .navbar-right, 
-    .navbar-brand,
-    .navbar-nav {
-        margin: 0 !important;
-    }
-}
+  @media screen and (max-width: 973px) {
+
+      .navbar-right,
+      .navbar-brand,
+      .navbar-nav {
+          margin: 0 !important;
+      }
+  }
 
 
 
@@ -343,21 +359,27 @@
 
       .second-section-left-text,
       .second-section-right-text {
-          padding: 5%;
+          padding: 6%;
+          max-width: 70%;
+      }
+
+      .second-section-left-text {
+          left: 15%;
+      }
+
+      .second-section-right-text {
+          right: 15%;
       }
 
       .second-section {
           height: 100%;
-      }
-
-      .third-section {
-          padding: 10% 0;
+          justify-content: center !important;
       }
 
       .third-section-first-div,
       .third-section-second-div,
       .third-section-third-div {
-          padding: 3.5%;
+          padding: 8% 3.5%;
       }
 
       #second-section-bg {
@@ -380,11 +402,6 @@
       .aflete img {
           padding-right: 0;
           padding-bottom: 2em;
-      }
-
-      .second-section-text {
-          max-width: 40vw;
-          right: 5%;
       }
 
       .third-section-text h2 {
