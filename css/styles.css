@@ -46,8 +46,18 @@
       border: none !important;
   }
 
+  .navbar-brand {
+      display: flex;
+      align-items: center;
+      margin-left: 3em !important;
+  }
+
   .navbar-default .navbar-nav > li > a {
       color: white !important;
+  }
+
+  .nav-menu {
+      margin-left: 4em !important;
   }
 
   .navbar-default .navbar-nav > li > a:hover {
@@ -63,6 +73,10 @@
       overflow: hidden !important;
   }
 
+  .navbar-right {
+      margin-right: 5em !important;
+  }
+
   .first-section {
       display: flex;
       justify-content: space-around;
@@ -75,7 +89,7 @@
       background: rgba(0, 0, 0, 0.5);
       color: #f1f1f1;
       width: 100%;
-      padding: 20px;
+      padding: 20px 50px;
       animation: fadeIn ease 2s;
       -webkit-animation: fadeIn ease 5s;
       -moz-animation: fadeIn ease 5s;
@@ -193,11 +207,20 @@
   }
 
   .third-section-first-div {
-      padding: 8% 15% 0 15%;
+      padding: 8% 15% 4% 15%;
   }
 
   .third-section-second-div {
-      padding: 4% 15% 0 15%;
+      padding: 4% 15% 4% 15%;
+      background-color: lightgray;
+  }
+
+  .third-section-second-div h2 {
+      color: black;
+  }
+
+  .third-section-second-div h4 {
+      color: steelblue;
   }
 
   .third-section-third-div {
@@ -271,12 +294,29 @@
   /*************     MEDIA QUERIES    **************/
 
 
+@media screen and (max-width: 973px) {
+    .navbar-right, 
+    .navbar-brand,
+    .navbar-nav {
+        margin: 0 !important;
+    }
+}
+
 
 
   @media screen and (max-width: 700px) {
 
       #header-video {
           height: 91vh;
+      }
+
+      .form-control {
+          height: 115% !important;
+          border-radius: 0px !important;
+      }
+
+      .search-btn {
+          border-radius: 0px !important;
       }
 
       .first-section {
@@ -322,6 +362,7 @@
 
       #second-section-bg {
           max-width: none;
+          opacity: 0.4;
       }
 
       .aflete img {
@@ -339,6 +380,23 @@
       .aflete img {
           padding-right: 0;
           padding-bottom: 2em;
+      }
+
+      .second-section-text {
+          max-width: 40vw;
+          right: 5%;
+      }
+
+      .third-section-text h2 {
+          font-size: 0.8em;
+      }
+
+      .third-section-text h4 {
+          font-size: 0.8em;
+      }
+
+      .third-section-img {
+          width: 50%;
       }
 
   }
